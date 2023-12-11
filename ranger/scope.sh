@@ -86,6 +86,17 @@ handle_extension() {
             ## Preview as markdown conversion
             pandoc -s -t markdown -- "${FILE_PATH}" && exit 5
             exit 1;;
+        
+        ## Markdown
+        md|markdown)
+            if command -v mdcat >/dev/null 2>&1; then
+                mdcat "${FILE_PATH}" && exit 5
+            elif command -v pandoc >/dev/null 2>&1; then
+                pandoc -s -f markdown -t plain "${FILE_PATH}" && exit 5
+            fi
+            exit 1;;
+
+
 
         ## XLSX
         xlsx)
