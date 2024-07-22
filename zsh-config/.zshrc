@@ -162,4 +162,4 @@ ranger_cd() {
 alias ranger='ranger_cd'
 
 alias show=fastfetch
-
+alias ls=colorls
