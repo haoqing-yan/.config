@@ -1,0 +1,1 @@
+/Users/yanhaoqing/.vim/nvim-init.vim

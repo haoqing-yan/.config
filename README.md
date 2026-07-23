@@ -73,6 +73,22 @@
 - `rifle.conf` - ranger 文件关联配置
 - `scope.sh` - ranger 预览脚本
 
+配置默认使用 iTerm2 图片协议，并通过仓库内的 `scope.sh` 提供文本、归档、图片、PDF
+和视频预览。建议按需安装以下可选工具；缺少某个工具时，预览脚本会继续尝试其他后端：
+
+```sh
+brew install ranger bat highlight jq poppler ffmpegthumbnailer atool
+```
+
+常用快捷键：
+
+- `zh`：显示或隐藏点文件
+- `zi`：开启或关闭图片预览
+- `zp`：开启或关闭文件预览
+- `du`：显示当前目录下一级内容的大小
+- `dU`：按大小排序显示当前目录下一级内容
+- `dT`：将选中文件移到系统废纸篓（需要 ranger 的 `trash` 命令可用）
+
 ### `thefuck`
 
 - `__pycache__` - thefuck 缓存目录
@@ -110,5 +126,4 @@
 ## 许可
 
 本项目采用 MIT 许可。
-
 

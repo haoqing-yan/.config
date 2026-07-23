@@ -161,4 +161,11 @@ ranger_cd() {
 }
 alias ranger='ranger_cd'
 
+vim() {
+    if [ "$#" -eq 1 ] && [ "$1" = "." ] && command -v mvim >/dev/null 2>&1; then
+        mvim "$1"
+    else
+        command vim "$@"
+    fi
+}
 
