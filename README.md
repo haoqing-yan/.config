@@ -55,7 +55,11 @@
 
 ### `install.sh`
 
-- 一键安装脚本，用于安装 Homebrew、zsh、Oh My Zsh、Powerlevel10k 和 colorls，并下载配置文件仓库
+- 支持 macOS 和主流 Linux 发行版的一键安装脚本
+- 自动识别 Homebrew、APT、DNF、Pacman 或 Zypper
+- 安装 zsh、Git、常用终端工具、Oh My Zsh 和 Powerlevel10k
+- 自动链接 Zsh 配置；已有文件会先备份到 `~/.dotfiles-backup`
+- 可重复执行，并支持 `--dry-run` 预览操作
 
 ### `iterm2`
 
@@ -111,11 +115,15 @@ brew install ranger bat highlight jq poppler ffmpegthumbnailer atool
 2. 运行安装脚本：
 
     ```sh
-    chmod +x install.sh
     ./install.sh
     ```
 
-    该脚本将安装 Homebrew、zsh、Oh My Zsh、Powerlevel10k 和 colorls，并下载此配置文件仓库。
+    脚本会自动识别 macOS 或 Linux，并使用当前系统的包管理器安装依赖。
+    如需先查看将执行的命令：
+
+    ```sh
+    ./install.sh --dry-run
+    ```
 
 3. 重新启动终端以应用更改。
 
@@ -126,4 +134,3 @@ brew install ranger bat highlight jq poppler ffmpegthumbnailer atool
 ## 许可
 
 本项目采用 MIT 许可。
-
